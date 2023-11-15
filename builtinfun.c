@@ -9,5 +9,5 @@ void _printenv(char **environ)
 	int i = 0;
 
 	for (; environ[i] ; i++)
-		puts(environ[i]);
+		_puts(environ[i]);
 }

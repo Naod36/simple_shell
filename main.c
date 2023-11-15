@@ -7,7 +7,7 @@
  *
  * Return: an array of directories containing the command or NULL on failure
  */
-char **_which(char *fpath)
+char **_which(char *cmd)
 {
 	int size = 64;
 	int i = 0;
@@ -17,18 +17,18 @@ char **_which(char *fpath)
 	char **dirs =  calloc(sizeof(char *), size);
 	char *token = NULL;
 
-	if (fpath == NULL)
+	if (cmd == NULL)
 	{
-		free(fpath);
+		free(cmd);
 		return (0);
 	}
 	if (dirs == NULL)
 	{
-		free(fpath);
+		free(cmd);
 		perror("Error allocated memory");
 		return (NULL);
 	}
-	copy_path = strdup(fpath); /* Copy the fpath string */
+	copy_path = strdup(cmd); /* Copy the fpath string */
 	token = strtok(copy_path, delim); /* Split the string by the delimiter */
 
 	while (token != NULL)

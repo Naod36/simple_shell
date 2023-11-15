@@ -44,7 +44,7 @@ int str_len(const char *s)
 }
 
 /**
- *puts - prints a string
+ *_puts - prints a string
  *@str: A to be printed
  *
  *Return: void
