@@ -1,3 +1,2 @@
-simple_shell
-
-by Naod Kassahun And Eden Birhan
+simple_shell 
+Team project
